@@ -1,0 +1,12 @@
+---
+- hosts: dev
+  become: True
+  tasks:
+    - name: Install git
+      apt:
+        name: git
+        state: present
+    - name: Install chromium-browser
+      apt:
+        name: chromium-browser
+        state: present
